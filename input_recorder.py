@@ -16,7 +16,7 @@ def print_delay_and_update():
     last_action_time = current_time
 
 
-def onClick(x, y, button, pressed):
+def onClick(x: int, y: int, button: Button, pressed: bool):
     if pressed:
         print_delay_and_update()
         btn_name = str(button).replace("Button.", "")
@@ -24,7 +24,7 @@ def onClick(x, y, button, pressed):
         sys.stdout.flush()
 
 
-def onScroll(x, y, dx, dy):
+def onScroll(x: int, y: int, dx: int, dy: int):
     print_delay_and_update()
     print(f"    pyautogui.scroll({dy}, x={x}, y={y})")
     sys.stdout.flush()
